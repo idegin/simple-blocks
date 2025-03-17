@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50005139-5079-4bb2-8ced-bec49ced302a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/__mock__/blocks.mock.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/about/BasicAbout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/about/ReversedAbout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/about/about.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/hero/BasicHero.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/hero/SaaSHero.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/hero/hero.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/page-builder/left-panel/left-panel-container.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/page-builder/preview/Preview.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/block-props.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/page-builder/header/builder-header-tools/builder-header-tools.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context/preview.context.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/index.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__mock__/blocks.mock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__mock__/blocks.mock.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/about/BasicAbout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/about/BasicAbout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/page-builder/PageBuilder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/PageBuilder.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/page-builder/header/builder-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/header/builder-header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/page-builder/preview/Preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/preview/Preview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/page-builder/right-panel/block-config-form/HeroBlockConfigForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/page-builder/right-panel/block-config-form/PropertyForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/right-panel/block-config-form/PropertyForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/context/builder.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/context/builder.context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/block-props.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/block-props.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/builder.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/builder.types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +72,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\web\projects\simple-blocks\components\page-builder\header\builder-header-tools" />
       <recent name="C:\web\projects\simple-blocks\blocks\hero" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -95,8 +99,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.lint" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +123,10 @@
       <workItem from="1741967660843" duration="63000" />
       <workItem from="1742076967401" duration="1693000" />
       <workItem from="1742120437371" duration="20681000" />
-      <workItem from="1742147333018" duration="17974000" />
+      <workItem from="1742147333018" duration="19069000" />
+      <workItem from="1742175850338" duration="481000" />
+      <workItem from="1742176351088" duration="18321000" />
+      <workItem from="1742226339750" duration="601000" />
     </task>
     <servers />
   </component>

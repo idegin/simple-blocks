@@ -8,7 +8,8 @@ import React, {
 import { LoaderCircle } from "lucide-react";
 
 import {
-  PageBlockData, PageBlockDataRef,
+  PageBlockData,
+  PageBlockDataRef,
   PageData,
   ProjectData,
   ProjectTheme,
@@ -18,7 +19,7 @@ export interface BuilderState {
   pages: PageData[];
   project: ProjectData | null;
   blocks: PageBlockData[];
-  blockRefs: PageBlockDataRef[],
+  blockRefs: PageBlockDataRef[];
   theme: ProjectTheme | null;
 }
 
@@ -59,7 +60,7 @@ export const BuilderProvider = ({ values, children }: BuilderProviderProps) => {
     <BuilderContext.Provider value={{ state, setState }}>
       {!state.project ? (
         <div className={"flex justify-center items-center h-screen"}>
-          <LoaderCircle className={"text-primary"} />
+          <LoaderCircle className={"text-primary animate-spin"} />
         </div>
       ) : (
         children

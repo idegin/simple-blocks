@@ -52,6 +52,7 @@ const config = {
             background: '#1D1D1F',
             content1: '#131519',
             divider: 'rgba(162,162,163,0.15)',
+            content4: '#5C5B5E'
           },
         },
       },

@@ -1,8 +1,7 @@
-import {BlockType, PageBlockDataRef} from "@/types/builder.types";
+import { BlockType, PageBlockDataRef } from "@/types/builder.types";
 import { mapper as heroMapper } from "@/blocks/hero/hero";
 import { mapper as aboutMapper } from "@/blocks/about/about";
 import { PageBlockData } from "@/types/builder.types";
-
 
 /**
  * Dynamically builds a list of blocks from the block folders
@@ -30,10 +29,6 @@ const blockList: { rootFolder: string; components: string[] }[] =
 
 export default blockList;
 
-
-
-
-
 export const mockPageBlocks: PageBlockData[] = [
   {
     _id: "block1",
@@ -45,7 +40,7 @@ export const mockPageBlocks: PageBlockData[] = [
     _id: "block3",
     folder: BlockType.ABOUT,
     component: "BasicAbout",
-    value:{}
+    value: {},
   },
 ];
 
@@ -53,11 +48,11 @@ export const mockBlockRefs: PageBlockDataRef[] = [
   {
     block: "block3",
     index: 0,
-    page_id: "homepage"
+    page_id: "homepage",
   },
   {
     block: "block1",
     index: 1,
-    page_id: "homepage"
+    page_id: "homepage",
   },
 ];

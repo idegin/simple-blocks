@@ -1,19 +1,24 @@
 import { Avatar, Button } from "@heroui/react";
-import { ArrowLeft, DownloadIcon, MenuIcon, SaveIcon } from "lucide-react";
-import { InfoIcon } from "@heroui/shared-icons";
+import {
+  ArrowLeft,
+  DownloadIcon,
+  MenuIcon,
+  SaveIcon,
+} from "lucide-react";
 import {
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
-  DropdownItem,
+  DropdownItem
 } from "@heroui/react";
 
 import { ToggleButton } from "@/components/page-builder/left-panel/left-panel";
 import { useBuilderContext } from "@/context/builder.context";
+import BuilderHeaderTools from "@/components/page-builder/header/builder-header-tools/builder-header-tools";
 
 export default function BuilderHeader() {
   const {
-    state: { project },
+    state: { project }
   } = useBuilderContext();
 
   return (
@@ -25,14 +30,7 @@ export default function BuilderHeader() {
       >
         <ToggleButton Icon={ArrowLeft} label={"Go back"} />
         <div className={"w-full flex items-center justify-center"}>
-          <div
-            className={
-              "flex items-center text-content4 gap-sm cursor-pointer hover:text-foreground hover:bg-content2 p-sm rounded-xl"
-            }
-          >
-            <InfoIcon />
-            <small>{project?.name || "N/A"}</small>
-          </div>
+          <BuilderHeaderTools/>
         </div>
         <div className={"flex items-center gap-sm"}>
           <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
