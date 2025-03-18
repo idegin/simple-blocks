@@ -1,3 +1,4 @@
+'use client'
 import { Avatar, Button } from "@heroui/react";
 import {
   ArrowLeft,

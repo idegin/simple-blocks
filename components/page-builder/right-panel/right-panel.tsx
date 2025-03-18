@@ -1,3 +1,4 @@
+'use client'
 import PropertyForm from "@/components/page-builder/right-panel/block-config-form/PropertyForm";
 
 export default function RightPanel() {

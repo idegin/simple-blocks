@@ -1,3 +1,4 @@
+'use client'
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { PageBlockDataRef } from "@/types/builder.types";
 
@@ -24,7 +25,6 @@ interface PreviewProviderProps {
 export const PreviewProvider = ({ children }: PreviewProviderProps) => {
   const [state, setState] = useState<PreviewState>(initialState);
 
-  console.log('PREVIEW STATE:::', state)
   return (
     <PreviewContext.Provider value={{ state, setState }}>
       {children}

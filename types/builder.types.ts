@@ -41,6 +41,7 @@ export enum BlockType {
   NAVIGATION = "navigation",
   HEADER = "header",
   CTA = "cta",
+  BLOG = "blog",
 }
 
 export type ProjectTheme = {

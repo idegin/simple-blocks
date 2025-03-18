@@ -1,4 +1,3 @@
-"use client";
 import RightPanel from "@/components/page-builder/right-panel/right-panel";
 import BuilderHeader from "@/components/page-builder/header/builder-header";
 import { BuilderProvider, BuilderState } from "@/context/builder.context";

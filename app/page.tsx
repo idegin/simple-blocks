@@ -1,4 +1,3 @@
-"use client";
 import PageBuilder from "@/components/page-builder/PageBuilder";
 import { mockPageBlocks, mockBlockRefs } from "@/__mock__/blocks.mock";
 

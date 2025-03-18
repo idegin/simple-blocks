@@ -5,20 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50005139-5079-4bb2-8ced-bec49ced302a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/page-builder/header/builder-header-tools/builder-header-tools.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/context/preview.context.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/index.utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/blog/BasicBlog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/page-builder/right-panel/block-config-form/ListFieldProperty.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/page-builder/right-panel/block-config-form/PropertyFieldRenderer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/placeholder.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__mock__/blocks.mock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__mock__/blocks.mock.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/about/BasicAbout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/about/BasicAbout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/about/about.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/hero/hero.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/page-builder/PageBuilder.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/PageBuilder.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/page-builder/header/builder-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/header/builder-header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/page-builder/preview/Preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/preview/Preview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/page-builder/right-panel/block-config-form/HeroBlockConfigForm.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/page-builder/right-panel/block-config-form/PropertyForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/right-panel/block-config-form/PropertyForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/page-builder/right-panel/right-panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/page-builder/right-panel/right-panel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/context/builder.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/context/builder.context.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/context/preview.context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/context/preview.context.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/block-props.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/block-props.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/builder.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/builder.types.ts" afterDir="false" />
     </list>
@@ -72,6 +76,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\web\projects\simple-blocks\public" />
+      <recent name="C:\web\projects\simple-blocks\public\placeholders" />
       <recent name="C:\web\projects\simple-blocks\components\page-builder\header\builder-header-tools" />
       <recent name="C:\web\projects\simple-blocks\blocks\hero" />
     </key>
@@ -107,7 +113,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
       </set>
     </attachedChunks>
   </component>
@@ -126,7 +132,10 @@
       <workItem from="1742147333018" duration="19069000" />
       <workItem from="1742175850338" duration="481000" />
       <workItem from="1742176351088" duration="18321000" />
-      <workItem from="1742226339750" duration="601000" />
+      <workItem from="1742226339750" duration="6511000" />
+      <workItem from="1742250872108" duration="4766000" />
+      <workItem from="1742294797644" duration="173000" />
+      <workItem from="1742295101336" duration="15926000" />
     </task>
     <servers />
   </component>

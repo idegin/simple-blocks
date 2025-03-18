@@ -1,6 +1,16 @@
 import type { BlockConfig } from "@/types/block-props.types"
 
-export function BasicAbout(props: typeof config.fields) {
+export function BasicAbout(props: {
+  [K in keyof typeof config.fields]: typeof config.fields[K] extends Array<any>
+    ? Array<any>
+    : {
+      string_value?: string;
+      boolean_value?: boolean;
+      number_value?: number;
+      array_value?: any[];
+      object_value?: any;
+    };
+}) {
   return (
     <section className="py-52 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -47,12 +57,18 @@ export function BasicAbout(props: typeof config.fields) {
             )}
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <button className="bg-primary text-white px-8 py-3.5 rounded-full font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:translate-y-[-2px] transition-all duration-300">
-                Learn More
-              </button>
-              <button className="bg-white border border-gray-200 text-gray-800 px-8 py-3.5 rounded-full font-medium shadow-md hover:shadow-lg hover:translate-y-[-2px] transition-all duration-300">
-                {props?.ctaBtn1?.string_value || "Our Team"}
-              </button>
+              {
+                props.btnPrimary?.string_value?.trim() && <button className="bg-primary text-white px-8 py-3.5 rounded-full font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:translate-y-[-2px] transition-all duration-300">
+                  {props.btnPrimary?.string_value}
+                </button>
+              }
+              {
+                props?.btnSecondary?.string_value?.trim() &&
+                <button
+                  className="bg-white border border-gray-200 text-gray-800 px-8 py-3.5 rounded-full font-medium shadow-md hover:shadow-lg hover:translate-y-[-2px] transition-all duration-300">
+                  {props?.btnSecondary?.string_value}
+                </button>
+              }
             </div>
           </div>
         </div>
@@ -79,11 +95,15 @@ export const config: BlockConfig = {
       formType: "textarea",
       defaultValue: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, felis ac lacinia tincidunt, nisi risus aliquam dolor, non sodales magna felis eget ligula. Suspendisse potenti. Donec tempus, ex in efficitur varius, lorem nisi placerat urna.`,
     },
-    ctaBtn1: {
+    btnPrimary: {
       label: "Button 1",
+      defaultValue: "Learn More",
+      formType: "input",
+    },
+    btnSecondary: {
+      label: "Button 2",
       defaultValue: "Our Team",
       formType: "input",
     },
   },
 }
-

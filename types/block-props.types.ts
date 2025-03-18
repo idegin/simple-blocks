@@ -1,6 +1,6 @@
 export interface BlockConfigField {
   label: string;
-  defaultValue: any;
+  defaultValue: Record<any, BlockConfigField> | Record<any, BlockConfigField>[] | string | number | boolean;
   formType: ConfigFormType;
 
   string_value?: string;
@@ -13,7 +13,7 @@ export interface BlockConfigField {
 export interface BlockConfig {
   label: string;
   description?: string;
-  fields: Record<any, BlockConfigField>;
+  fields: Record<any, BlockConfigField | Record<any, BlockConfigField>[]>;
 }
 
-export type ConfigFormType = "input" | "textarea";
+export type ConfigFormType = "input" | "textarea" | "list" | "dropdown" | "switch";

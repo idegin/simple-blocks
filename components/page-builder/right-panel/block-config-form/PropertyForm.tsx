@@ -1,16 +1,16 @@
 'use client'
 
-import { Input, Textarea } from "@heroui/react";
 import PropertyFormContainer from "@/components/page-builder/right-panel/block-config-form/PropertyFormContainer";
 import { usePreviewContext } from "@/context/preview.context";
 import { useBuilderContext } from "@/context/builder.context";
 import { useEffect, useState } from "react";
-import { BlockConfigField } from "@/types/block-props.types";
+import { type BlockConfig, BlockConfigField } from "@/types/block-props.types";
+import PropertyFieldRenderer from "@/components/page-builder/right-panel/block-config-form/PropertyFieldRenderer";
 
 export default function PropertyForm() {
   const { state: previewState } = usePreviewContext();
   const { state: builderState, setState: setBuilderState } = useBuilderContext();
-  const [blockConfig, setBlockConfig] = useState<any>(null);
+  const [blockConfig, setBlockConfig] = useState<BlockConfig | null>(null);
   const [loading, setLoading] = useState(false);
   const [blockName, setBlockName] = useState<string>("");
 
@@ -35,7 +35,6 @@ export default function PropertyForm() {
       setLoading(true);
 
       try {
-        // Dynamically import the component to get its config
         const module = await import(`@/blocks/${blockData.folder}/${blockData.component}`);
         setBlockConfig(module.config || null);
       } catch (error) {
@@ -54,7 +53,6 @@ export default function PropertyForm() {
 
     const updatedBlocks = builderState.blocks.map(block => {
       if (block._id === previewState.activeBlockRef?.block) {
-        // Create new field value based on the field type
         const fieldValue: Partial<BlockConfigField> = {};
 
         switch(fieldType) {
@@ -68,7 +66,9 @@ export default function PropertyForm() {
           case "checkbox":
             fieldValue.boolean_value = value;
             break;
-          // Add more cases for other field types as needed
+          case "list":
+            fieldValue.array_value = value;
+            break;
         }
 
         return {
@@ -130,38 +130,15 @@ export default function PropertyForm() {
 
   return (
     <PropertyFormContainer leftComponent={<h3>{blockConfig.label || blockName}</h3>}>
-      {blockConfig && blockConfig.fields && Object.entries(blockConfig.fields).map(([key, field]: [string, any]) => {
-        const currentValue = activeBlockData?.value?.[key]?.string_value || field.defaultValue || '';
-
-        if (field.formType === "input") {
-          return (
-            <Input
-              key={key}
-              label={field.label}
-              size="sm"
-              type="text"
-              value={currentValue}
-              onChange={(e) => handleFieldChange(key, e.target.value, "input")}
-            />
-          );
-        }
-
-        if (field.formType === "textarea") {
-          return (
-            <Textarea
-              key={key}
-              label={field.label}
-              placeholder={field.placeholder || `Enter ${field.label.toLowerCase()}`}
-              value={currentValue}
-              onChange={(e) => handleFieldChange(key, e.target.value, "textarea")}
-            />
-          );
-        }
-
-        // Add other field types here as needed
-
-        return null;
-      })}
+      {blockConfig && blockConfig.fields && Object.entries(blockConfig.fields).map(([key, field]) => (
+        <PropertyFieldRenderer
+          key={key}
+          fieldKey={key}
+          field={field}
+          currentValue={activeBlockData?.value?.[key]}
+          onFieldChange={handleFieldChange}
+        />
+      ))}
     </PropertyFormContainer>
   );
 }
